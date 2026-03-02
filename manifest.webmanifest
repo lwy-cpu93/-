@@ -1,0 +1,19 @@
+{
+  "name": "A股实时台账",
+  "short_name": "A股台账",
+  "description": "iPhone 可添加到主屏，实时查看A股股票行情和100股测算金额。",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#f7f4ec",
+  "theme_color": "#0e7465",
+  "lang": "zh-CN",
+  "icons": [
+    {
+      "src": "/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

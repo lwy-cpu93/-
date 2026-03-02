@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#0e7465" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="A股台账" />
+  <link rel="manifest" href="/manifest.webmanifest" />
+  <link rel="icon" href="/icon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="/icon.svg" />
+  <title>A股实时台账</title>
+  <style>
+    :root {
+      --bg-1: #f7f4ec;
+      --bg-2: #e6f0eb;
+      --card: #ffffff;
+      --ink: #152227;
+      --muted: #4c626d;
+      --line: #d4e1e7;
+      --up: #c0392b;
+      --down: #147a33;
+      --ok: #0e7465;
+      --warn: #b65f12;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      font-family: "Noto Sans SC", "PingFang SC", "Segoe UI", sans-serif;
+      background:
+        radial-gradient(circle at 12% 10%, #fff3d9 0, transparent 40%),
+        radial-gradient(circle at 88% 10%, #dceee6 0, transparent 45%),
+        linear-gradient(180deg, var(--bg-1), var(--bg-2));
+      min-height: 100vh;
+    }
+    .wrap {
+      width: min(1200px, 94vw);
+      margin: 18px auto 26px;
+    }
+    h1 {
+      margin: 0 0 8px;
+      font-size: clamp(22px, 4vw, 34px);
+      letter-spacing: 0.4px;
+    }
+    .sub {
+      margin: 0;
+      color: var(--muted);
+      font-size: 13px;
+    }
+    .tip {
+      margin: 10px 0 16px;
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.5;
+    }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      overflow: hidden;
+      box-shadow: 0 10px 28px rgba(16, 30, 38, 0.08);
+    }
+    .head {
+      padding: 12px 14px;
+      border-bottom: 1px solid var(--line);
+      background: linear-gradient(90deg, #f9fcfa, #fff9ef);
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 10px;
+      align-items: center;
+    }
+    .status {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 12px;
+      color: #fff;
+      background: var(--ok);
+      border-radius: 999px;
+      padding: 4px 10px;
+      white-space: nowrap;
+    }
+    .status.warn { background: var(--warn); }
+    .meta {
+      margin-top: 6px;
+      font-size: 12px;
+      color: var(--muted);
+      line-height: 1.5;
+    }
+    .ops {
+      padding: 12px 14px;
+      border-bottom: 1px solid var(--line);
+      display: grid;
+      gap: 10px;
+    }
+    .ops-row {
+      display: grid;
+      grid-template-columns: 1fr auto auto;
+      gap: 8px;
+      align-items: center;
+    }
+    input[type="text"] {
+      width: 100%;
+      min-height: 36px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 7px 10px;
+      font-size: 13px;
+      background: #fff;
+      color: var(--ink);
+    }
+    button {
+      border: 1px solid transparent;
+      border-radius: 8px;
+      min-height: 36px;
+      padding: 0 10px;
+      font-size: 12px;
+      cursor: pointer;
+      color: #fff;
+      background: var(--ok);
+      white-space: nowrap;
+    }
+    button.secondary {
+      background: #fff;
+      color: var(--ink);
+      border-color: var(--line);
+    }
+    .table-wrap {
+      overflow: auto;
+      padding: 10px 14px 14px;
+    }
+    table {
+      width: 100%;
+      min-width: 980px;
+      border-collapse: collapse;
+      font-size: 13px;
+    }
+    th, td {
+      border-bottom: 1px solid var(--line);
+      padding: 8px 6px;
+      text-align: right;
+      white-space: nowrap;
+    }
+    th:first-child, td:first-child,
+    th:nth-child(2), td:nth-child(2),
+    th:nth-child(3), td:nth-child(3) {
+      text-align: left;
+    }
+    thead th {
+      position: sticky;
+      top: 0;
+      background: #fbfdff;
+      z-index: 1;
+    }
+    .up { color: var(--up); font-weight: 600; }
+    .down { color: var(--down); font-weight: 600; }
+    .empty {
+      color: var(--muted);
+      padding: 18px 0;
+      text-align: center;
+    }
+    .err {
+      padding: 0 14px 12px;
+      color: #b5362a;
+      font-size: 12px;
+      min-height: 18px;
+    }
+    @media (max-width: 920px) {
+      .ops-row {
+        grid-template-columns: 1fr;
+      }
+      .head {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <h1>A股实时台账</h1>
+    <p class="sub">支持 iPhone 主屏图标启动，页面每15秒自动刷新行情。</p>
+    <p class="tip">iPhone 添加到桌面：Safari -> 分享 -> 添加到主屏幕。</p>
+
+    <section class="card">
+      <div class="head">
+        <div>
+          <strong>实时行情（每只按100股测算）</strong>
+          <div class="meta" id="meta">准备加载...</div>
+        </div>
+        <div class="status" id="status">初始化中</div>
+      </div>
+
+      <div class="ops">
+        <div class="ops-row">
+          <input id="codesInput" type="text" placeholder="股票代码，逗号分隔，例如 600519,000858,600036" />
+          <button id="applyCodes">应用代码</button>
+          <button id="refreshNow" class="secondary">立即刷新</button>
+        </div>
+        <div class="ops-row">
+          <input id="intervalInput" type="text" value="15" />
+          <button id="applyInterval">设置刷新秒数</button>
+          <button id="toggleAuto" class="secondary">自动刷新：开</button>
+        </div>
+      </div>
+
+      <div class="table-wrap">
+        <table id="quotesTable"></table>
+      </div>
+      <div class="err" id="errorText"></div>
+    </section>
+  </main>
+
+  <script src="/app.js"></script>
+</body>
+</html>
