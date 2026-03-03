@@ -1,10 +1,8 @@
 const MAX_CODES = 120;
 
 const DEFAULT_CODES = [
-  "600688", "600108", "000912", "600227", "600028",
-  "000890", "000554", "600968", "000096", "601857",
-  "600256", "600435", "600714", "600452", "002413",
-  "002040", "601808", "600722", "000070", "600301"
+  "600688","600108","000912","600227","600028","000890","000554","600968","000096","601857",
+  "600256","600435","600714","600452","002413","002040","601808","600722","000070","600301"
 ];
 
 function normalizeCodes(raw) {
@@ -14,17 +12,14 @@ function normalizeCodes(raw) {
     .map(s => s.trim().replace(/[^\d]/g, ""))
     .filter(Boolean)
     .filter(s => /^\d{6}$/.test(s));
-
   const unique = [];
   const seen = new Set();
-
   for (const code of list) {
     if (seen.has(code)) continue;
     seen.add(code);
     unique.push(code);
     if (unique.length >= MAX_CODES) break;
   }
-
   return unique;
 }
 
@@ -46,10 +41,7 @@ module.exports = async function handler(req, res) {
     return res.status(405).json({ error: "Method Not Allowed" });
   }
 
-  const codesParam = Array.isArray(req.query.codes)
-    ? req.query.codes.join(",")
-    : (req.query.codes || "");
-
+  const codesParam = Array.isArray(req.query.codes) ? req.query.codes.join(",") : (req.query.codes || "");
   const codes = normalizeCodes(codesParam);
   const finalCodes = codes.length > 0 ? codes : DEFAULT_CODES;
   const secids = finalCodes.map(toSecId).join(",");
@@ -64,7 +56,6 @@ module.exports = async function handler(req, res) {
         "accept": "application/json,text/plain,*/*"
       }
     });
-
     if (!upstream.ok) {
       return res.status(502).json({ error: `Upstream HTTP ${upstream.status}` });
     }
