@@ -1,5 +1,5 @@
 ﻿{
-    "generated_at":  "2026-03-05 00:53:36",
+    "generated_at":  "2026-03-05 01:26:40",
     "source":  "Eastmoney ulist.np + stock.get",
     "portfolio":  "first_momentum_20_2026-03-02",
     "summary":  {
@@ -21,9 +21,9 @@
                      "pnl_100":  11,
                      "latest_day_pct":  -6.25,
                      "latest_amount":  1514374284,
-                     "updated_at":  "2026-03-05 00:53:36",
-                     "industry":  "未知行业",
-                     "reason_tag":  "动量衰减观察"
+                     "updated_at":  "2026-03-05 01:26:40",
+                     "industry":  "炼化及贸易",
+                     "reason_tag":  "资源周期驱动"
                  },
                  {
                      "code":  "600108",
@@ -35,7 +35,7 @@
                      "pnl_100":  92,
                      "latest_day_pct":  9.98,
                      "latest_amount":  1797908328,
-                     "updated_at":  "2026-03-05 00:53:36",
+                     "updated_at":  "2026-03-05 01:26:40",
                      "industry":  "种植业",
                      "reason_tag":  "强势涨停动量"
                  },
@@ -49,7 +49,7 @@
                      "pnl_100":  33,
                      "latest_day_pct":  5.19,
                      "latest_amount":  789617259.11,
-                     "updated_at":  "2026-03-05 00:53:36",
+                     "updated_at":  "2026-03-05 01:26:40",
                      "industry":  "农化制品",
                      "reason_tag":  "化工景气修复"
                  },
@@ -63,9 +63,9 @@
                      "pnl_100":  3,
                      "latest_day_pct":  -3.61,
                      "latest_amount":  704704253,
-                     "updated_at":  "2026-03-05 00:53:36",
-                     "industry":  "未知行业",
-                     "reason_tag":  "动量衰减观察"
+                     "updated_at":  "2026-03-05 01:26:40",
+                     "industry":  "农化制品",
+                     "reason_tag":  "化工轮动分化"
                  },
                  {
                      "code":  "600028",
@@ -77,9 +77,9 @@
                      "pnl_100":  29,
                      "latest_day_pct":  -5.37,
                      "latest_amount":  9275790665,
-                     "updated_at":  "2026-03-05 00:53:36",
-                     "industry":  "未知行业",
-                     "reason_tag":  "短线动量延续"
+                     "updated_at":  "2026-03-05 01:26:40",
+                     "industry":  "炼化及贸易",
+                     "reason_tag":  "资源周期驱动"
                  },
                  {
                      "code":  "000890",
@@ -91,7 +91,7 @@
                      "pnl_100":  44,
                      "latest_day_pct":  10.05,
                      "latest_amount":  993406348.82,
-                     "updated_at":  "2026-03-05 00:53:36",
+                     "updated_at":  "2026-03-05 01:26:40",
                      "industry":  "环保设备Ⅱ",
                      "reason_tag":  "短线动量延续"
                  },
@@ -105,7 +105,7 @@
                      "pnl_100":  176,
                      "latest_day_pct":  7.1,
                      "latest_amount":  1932994383.41,
-                     "updated_at":  "2026-03-05 00:53:36",
+                     "updated_at":  "2026-03-05 01:26:40",
                      "industry":  "炼化及贸易",
                      "reason_tag":  "资源链强动量"
                  },
@@ -119,9 +119,9 @@
                      "pnl_100":  59,
                      "latest_day_pct":  1.62,
                      "latest_amount":  2691052426,
-                     "updated_at":  "2026-03-05 00:53:36",
-                     "industry":  "未知行业",
-                     "reason_tag":  "强势涨停动量"
+                     "updated_at":  "2026-03-05 01:26:40",
+                     "industry":  "油服工程",
+                     "reason_tag":  "资源链强动量"
                  },
                  {
                      "code":  "000096",
@@ -133,9 +133,9 @@
                      "pnl_100":  9,
                      "latest_day_pct":  -8.44,
                      "latest_amount":  721501947.16,
-                     "updated_at":  "2026-03-05 00:53:36",
-                     "industry":  "未知行业",
-                     "reason_tag":  "动量衰减观察"
+                     "updated_at":  "2026-03-05 01:26:40",
+                     "industry":  "炼化及贸易",
+                     "reason_tag":  "资源周期驱动"
                  },
                  {
                      "code":  "601857",
@@ -147,9 +147,9 @@
                      "pnl_100":  129,
                      "latest_day_pct":  0.68,
                      "latest_amount":  14020847688,
-                     "updated_at":  "2026-03-05 00:53:36",
-                     "industry":  "未知行业",
-                     "reason_tag":  "强势涨停动量"
+                     "updated_at":  "2026-03-05 01:26:40",
+                     "industry":  "炼化及贸易",
+                     "reason_tag":  "资源链强动量"
                  },
                  {
                      "code":  "600256",
@@ -161,9 +161,9 @@
                      "pnl_100":  41,
                      "latest_day_pct":  -3.37,
                      "latest_amount":  5784639720,
-                     "updated_at":  "2026-03-05 00:53:36",
-                     "industry":  "未知行业",
-                     "reason_tag":  "短线动量延续"
+                     "updated_at":  "2026-03-05 01:26:40",
+                     "industry":  "炼化及贸易",
+                     "reason_tag":  "资源周期驱动"
                  },
                  {
                      "code":  "600435",
@@ -175,7 +175,7 @@
                      "pnl_100":  -25,
                      "latest_day_pct":  5.08,
                      "latest_amount":  2273990506,
-                     "updated_at":  "2026-03-05 00:53:36",
+                     "updated_at":  "2026-03-05 01:26:40",
                      "industry":  "地面兵装Ⅱ",
                      "reason_tag":  "动量衰减观察"
                  },
@@ -189,7 +189,7 @@
                      "pnl_100":  305,
                      "latest_day_pct":  4.92,
                      "latest_amount":  1578319419,
-                     "updated_at":  "2026-03-05 00:53:36",
+                     "updated_at":  "2026-03-05 01:26:40",
                      "industry":  "化学原料",
                      "reason_tag":  "化工景气强化"
                  },
@@ -203,9 +203,9 @@
                      "pnl_100":  -99,
                      "latest_day_pct":  0,
                      "latest_amount":  1560336814,
-                     "updated_at":  "2026-03-05 00:53:36",
-                     "industry":  "未知行业",
-                     "reason_tag":  "趋势转弱回撤"
+                     "updated_at":  "2026-03-05 01:26:40",
+                     "industry":  "电力",
+                     "reason_tag":  "公用事业防御"
                  },
                  {
                      "code":  "002413",
@@ -217,9 +217,9 @@
                      "pnl_100":  -29,
                      "latest_day_pct":  -0.37,
                      "latest_amount":  4899896844.79,
-                     "updated_at":  "2026-03-05 00:53:36",
-                     "industry":  "未知行业",
-                     "reason_tag":  "动量衰减观察"
+                     "updated_at":  "2026-03-05 01:26:40",
+                     "industry":  "军工电子Ⅱ",
+                     "reason_tag":  "高波动题材回撤"
                  },
                  {
                      "code":  "002040",
@@ -231,9 +231,9 @@
                      "pnl_100":  -12,
                      "latest_day_pct":  -10.02,
                      "latest_amount":  745536377,
-                     "updated_at":  "2026-03-05 00:53:36",
-                     "industry":  "未知行业",
-                     "reason_tag":  "动量衰减观察"
+                     "updated_at":  "2026-03-05 01:26:40",
+                     "industry":  "航运港口",
+                     "reason_tag":  "资源周期驱动"
                  },
                  {
                      "code":  "601808",
@@ -245,9 +245,9 @@
                      "pnl_100":  212,
                      "latest_day_pct":  1.27,
                      "latest_amount":  3467720067,
-                     "updated_at":  "2026-03-05 00:53:36",
-                     "industry":  "未知行业",
-                     "reason_tag":  "强势涨停动量"
+                     "updated_at":  "2026-03-05 01:26:40",
+                     "industry":  "油服工程",
+                     "reason_tag":  "资源链强动量"
                  },
                  {
                      "code":  "600722",
@@ -259,7 +259,7 @@
                      "pnl_100":  166,
                      "latest_day_pct":  5.55,
                      "latest_amount":  2363460720,
-                     "updated_at":  "2026-03-05 00:53:36",
+                     "updated_at":  "2026-03-05 01:26:40",
                      "industry":  "化学原料",
                      "reason_tag":  "化工景气强化"
                  },
@@ -273,9 +273,9 @@
                      "pnl_100":  -45,
                      "latest_day_pct":  4.06,
                      "latest_amount":  2224156682.11,
-                     "updated_at":  "2026-03-05 00:53:36",
-                     "industry":  "未知行业",
-                     "reason_tag":  "动量衰减观察"
+                     "updated_at":  "2026-03-05 01:26:40",
+                     "industry":  "通信设备",
+                     "reason_tag":  "高波动题材回撤"
                  },
                  {
                      "code":  "600301",
@@ -287,8 +287,8 @@
                      "pnl_100":  -204,
                      "latest_day_pct":  -2.52,
                      "latest_amount":  1333266751,
-                     "updated_at":  "2026-03-05 00:53:36",
-                     "industry":  "未知行业",
+                     "updated_at":  "2026-03-05 01:26:40",
+                     "industry":  "小金属",
                      "reason_tag":  "动量衰减观察"
                  }
              ]
