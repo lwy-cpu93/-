@@ -5,7 +5,11 @@ const CACHE_KEY = "live_quotes_cache";
 const LIVE_HEADER_MAP = {
   code: "代码",
   name: "名称",
+  buy_date: "买入日期",
+  buy_price: "买入价",
   last: "最新价",
+  return_since_buy_pct: "买入后涨跌(%)",
+  pnl_100: "100股盈亏",
   pct: "涨跌幅(%)",
   change: "涨跌额",
   open: "今开",
@@ -51,7 +55,9 @@ const state = {
   codes: [],
   intervalSec: 15,
   timer: null,
-  autoRefresh: true
+  autoRefresh: true,
+  firstBatchCodes: [],
+  firstBatchByCode: {}
 };
 
 const el = {
@@ -118,7 +124,13 @@ function valueClass(key, value) {
   const n = safeNumber(value);
   if (n === null) return "";
 
-  if (key === "pct" || key === "latest_day_pct" || key === "change_pct_since_buy" || key === "pnl_100") {
+  if (
+    key === "pct" ||
+    key === "latest_day_pct" ||
+    key === "change_pct_since_buy" ||
+    key === "return_since_buy_pct" ||
+    key === "pnl_100"
+  ) {
     if (n > 0) return "up";
     if (n < 0) return "down";
   }
@@ -175,6 +187,10 @@ async function loadDefaultCodes() {
   const fromQuery = parseCodes(qCodes || "");
   if (fromQuery.length > 0) return fromQuery;
 
+  if (state.firstBatchCodes.length > 0) {
+    return state.firstBatchCodes.slice();
+  }
+
   const saved = parseCodes(localStorage.getItem(CODE_KEY) || "");
   if (saved.length > 0) return saved;
 
@@ -187,6 +203,56 @@ async function loadDefaultCodes() {
   }
 
   return ["600519", "000858", "600036"];
+}
+
+function setFirstBatchBaseline(rows) {
+  const byCode = {};
+  const codes = [];
+
+  for (const r of rows || []) {
+    const code = formatCode(r.code);
+    const buyPrice = safeNumber(r.buy_price);
+    if (!code || buyPrice === null) continue;
+    if (byCode[code]) continue;
+
+    byCode[code] = {
+      buyPrice,
+      buyDate: String(r.buy_date || "")
+    };
+    codes.push(code);
+  }
+
+  state.firstBatchByCode = byCode;
+  state.firstBatchCodes = codes;
+}
+
+function enrichLiveRows(rows) {
+  return (rows || []).map(row => {
+    const code = formatCode(row.code);
+    const base = state.firstBatchByCode[code];
+    if (!base) {
+      return {
+        ...row,
+        buy_date: "",
+        buy_price: "",
+        return_since_buy_pct: "",
+        pnl_100: ""
+      };
+    }
+
+    const last = safeNumber(row.last);
+    const buy = base.buyPrice;
+    const ret = (last === null || buy === 0) ? null : ((last / buy) - 1) * 100;
+    const pnl = (last === null) ? null : (last - buy) * 100;
+
+    return {
+      ...row,
+      buy_date: base.buyDate,
+      buy_price: Number(buy.toFixed(2)),
+      return_since_buy_pct: ret === null ? "" : Number(ret.toFixed(2)),
+      pnl_100: pnl === null ? "" : Number(pnl.toFixed(2))
+    };
+  });
 }
 
 function renderDataTable(tableEl, rows, headerMap) {
@@ -217,9 +283,26 @@ function renderDataTable(tableEl, rows, headerMap) {
 
 function renderLiveSummary(payload) {
   const rows = payload?.rows || [];
-  const total = rows.reduce((sum, r) => sum + (safeNumber(r.buy_amount_100) || 0), 0);
+  const latestTotal = rows.reduce((sum, r) => sum + (safeNumber(r.buy_amount_100) || 0), 0);
+  const trackedRows = rows.filter(r => safeNumber(r.buy_price) !== null);
+  const buyTotal = trackedRows.reduce((sum, r) => sum + (safeNumber(r.buy_price) || 0) * 100, 0);
+  const pnlTotal = latestTotal - buyTotal;
+  const retTotal = buyTotal > 0 ? (pnlTotal / buyTotal) * 100 : null;
   const generatedAt = payload?.generated_at || "-";
-  el.meta.textContent = `更新时间：${generatedAt} | 行数：${rows.length} | 买入总额：${EIGHT_DIGIT_FMT.format(total)}`;
+
+  if (trackedRows.length > 0) {
+    el.meta.textContent =
+      `更新时间：${generatedAt} | 行数：${rows.length} | ` +
+      `首批匹配：${trackedRows.length} | ` +
+      `买入总额：${EIGHT_DIGIT_FMT.format(Math.round(buyTotal))} | ` +
+      `当前市值：${EIGHT_DIGIT_FMT.format(Math.round(latestTotal))} | ` +
+      `浮动盈亏：${formatCell("pnl_100", pnlTotal)} | ` +
+      `收益率：${retTotal === null ? "-" : formatCell("return_since_buy_pct", retTotal)}%`;
+    return;
+  }
+
+  el.meta.textContent =
+    `更新时间：${generatedAt} | 行数：${rows.length} | 当前市值：${EIGHT_DIGIT_FMT.format(Math.round(latestTotal))}`;
 }
 
 function renderReviewPanel(payload) {
@@ -250,8 +333,10 @@ function renderNewBuyPanel(payload) {
 async function loadPanels() {
   try {
     const review = await fetchJson("/data/first_review_20.json");
+    setFirstBatchBaseline(review?.rows || []);
     renderReviewPanel(review);
   } catch {
+    setFirstBatchBaseline([]);
     renderDataTable(el.reviewTable, [], REVIEW_HEADER_MAP);
     if (el.reviewMeta) el.reviewMeta.textContent = "复盘数据加载失败";
   }
@@ -280,9 +365,11 @@ async function refreshOnce() {
 
   try {
     const payload = await fetchLiveData();
-    renderDataTable(el.table, payload.rows || [], LIVE_HEADER_MAP);
-    renderLiveSummary(payload);
-    saveCache(payload);
+    const enrichedRows = enrichLiveRows(payload.rows || []);
+    const enrichedPayload = { ...payload, rows: enrichedRows };
+    renderDataTable(el.table, enrichedRows, LIVE_HEADER_MAP);
+    renderLiveSummary(enrichedPayload);
+    saveCache(enrichedPayload);
     setStatus("已刷新");
   } catch (err) {
     const cached = loadCache();
@@ -351,13 +438,13 @@ async function bootstrap() {
   bindEvents();
   registerServiceWorker();
 
+  await loadPanels();
   state.codes = await loadDefaultCodes();
   state.intervalSec = Math.max(5, Number(localStorage.getItem(INTERVAL_KEY) || 15));
 
   el.codesInput.value = state.codes.join(",");
   el.intervalInput.value = String(state.intervalSec);
 
-  await loadPanels();
   restartTimer();
   refreshOnce();
 }
