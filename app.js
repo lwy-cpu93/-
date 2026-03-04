@@ -6,9 +6,11 @@ const LIVE_HEADER_MAP = {
   code: "代码",
   name: "名称",
   buy_date: "买入日期",
+  hold_qty: "持仓股数",
   buy_price: "买入价",
   last: "最新价",
   return_since_buy_pct: "买入后涨跌(%)",
+  pnl_total: "持仓盈亏",
   pnl_100: "100股盈亏",
   pct: "涨跌幅(%)",
   change: "涨跌额",
@@ -56,8 +58,8 @@ const state = {
   intervalSec: 15,
   timer: null,
   autoRefresh: true,
-  firstBatchCodes: [],
-  firstBatchByCode: {}
+  portfolioCodes: [],
+  portfolioByCode: {}
 };
 
 const el = {
@@ -129,6 +131,7 @@ function valueClass(key, value) {
     key === "latest_day_pct" ||
     key === "change_pct_since_buy" ||
     key === "return_since_buy_pct" ||
+    key === "pnl_total" ||
     key === "pnl_100"
   ) {
     if (n > 0) return "up";
@@ -187,8 +190,8 @@ async function loadDefaultCodes() {
   const fromQuery = parseCodes(qCodes || "");
   if (fromQuery.length > 0) return fromQuery;
 
-  if (state.firstBatchCodes.length > 0) {
-    return state.firstBatchCodes.slice();
+  if (state.portfolioCodes.length > 0) {
+    return state.portfolioCodes.slice();
   }
 
   const saved = parseCodes(localStorage.getItem(CODE_KEY) || "");
@@ -205,51 +208,84 @@ async function loadDefaultCodes() {
   return ["600519", "000858", "600036"];
 }
 
-function setFirstBatchBaseline(rows) {
+function setPortfolioBaseline(firstBatchRows, secondBatchRows) {
   const byCode = {};
-  const codes = [];
+  const orderedCodes = [];
 
-  for (const r of rows || []) {
-    const code = formatCode(r.code);
-    const buyPrice = safeNumber(r.buy_price);
-    if (!code || buyPrice === null) continue;
-    if (byCode[code]) continue;
+  function addPosition(codeRaw, buyPriceRaw, qtyRaw, buyDateRaw) {
+    const code = formatCode(codeRaw);
+    const buyPrice = safeNumber(buyPriceRaw);
+    const qty = safeNumber(qtyRaw) || 100;
+    if (!code || buyPrice === null || qty <= 0) return;
 
-    byCode[code] = {
-      buyPrice,
-      buyDate: String(r.buy_date || "")
-    };
-    codes.push(code);
+    if (!byCode[code]) {
+      byCode[code] = {
+        totalQty: 0,
+        totalCost: 0,
+        dates: new Set()
+      };
+      orderedCodes.push(code);
+    }
+
+    byCode[code].totalQty += qty;
+    byCode[code].totalCost += buyPrice * qty;
+    if (buyDateRaw) byCode[code].dates.add(String(buyDateRaw));
   }
 
-  state.firstBatchByCode = byCode;
-  state.firstBatchCodes = codes;
+  for (const r of firstBatchRows || []) {
+    addPosition(r.code, r.buy_price, 100, r.buy_date);
+  }
+
+  for (const r of secondBatchRows || []) {
+    addPosition(r.code, r.buy_price, r.qty || 100, r.date);
+  }
+
+  const normalized = {};
+  for (const code of orderedCodes) {
+    const item = byCode[code];
+    const buyPrice = item.totalQty > 0 ? item.totalCost / item.totalQty : 0;
+    const dates = Array.from(item.dates).sort();
+    normalized[code] = {
+      buyPrice,
+      holdQty: item.totalQty,
+      buyDate: dates.join("/")
+    };
+  }
+
+  state.portfolioByCode = normalized;
+  state.portfolioCodes = orderedCodes;
 }
 
 function enrichLiveRows(rows) {
   return (rows || []).map(row => {
     const code = formatCode(row.code);
-    const base = state.firstBatchByCode[code];
+    const base = state.portfolioByCode[code];
     if (!base) {
       return {
         ...row,
         buy_date: "",
+        hold_qty: "",
         buy_price: "",
         return_since_buy_pct: "",
+        pnl_total: "",
         pnl_100: ""
       };
     }
 
     const last = safeNumber(row.last);
     const buy = base.buyPrice;
+    const holdQty = base.holdQty;
     const ret = (last === null || buy === 0) ? null : ((last / buy) - 1) * 100;
     const pnl = (last === null) ? null : (last - buy) * 100;
+    const pnlTotal = (last === null) ? null : (last - buy) * holdQty;
 
     return {
       ...row,
       buy_date: base.buyDate,
+      hold_qty: holdQty,
       buy_price: Number(buy.toFixed(2)),
       return_since_buy_pct: ret === null ? "" : Number(ret.toFixed(2)),
+      pnl_total: pnlTotal === null ? "" : Number(pnlTotal.toFixed(2)),
       pnl_100: pnl === null ? "" : Number(pnl.toFixed(2))
     };
   });
@@ -283,9 +319,20 @@ function renderDataTable(tableEl, rows, headerMap) {
 
 function renderLiveSummary(payload) {
   const rows = payload?.rows || [];
-  const latestTotal = rows.reduce((sum, r) => sum + (safeNumber(r.buy_amount_100) || 0), 0);
+  const latestTotal = rows.reduce((sum, r) => {
+    const holdQty = safeNumber(r.hold_qty);
+    const last = safeNumber(r.last);
+    if (holdQty !== null && last !== null) {
+      return sum + holdQty * last;
+    }
+    return sum + (safeNumber(r.buy_amount_100) || 0);
+  }, 0);
   const trackedRows = rows.filter(r => safeNumber(r.buy_price) !== null);
-  const buyTotal = trackedRows.reduce((sum, r) => sum + (safeNumber(r.buy_price) || 0) * 100, 0);
+  const buyTotal = trackedRows.reduce((sum, r) => {
+    const buyPrice = safeNumber(r.buy_price) || 0;
+    const holdQty = safeNumber(r.hold_qty) || 100;
+    return sum + buyPrice * holdQty;
+  }, 0);
   const pnlTotal = latestTotal - buyTotal;
   const retTotal = buyTotal > 0 ? (pnlTotal / buyTotal) * 100 : null;
   const generatedAt = payload?.generated_at || "-";
@@ -293,10 +340,10 @@ function renderLiveSummary(payload) {
   if (trackedRows.length > 0) {
     el.meta.textContent =
       `更新时间：${generatedAt} | 行数：${rows.length} | ` +
-      `首批匹配：${trackedRows.length} | ` +
+      `持仓匹配：${trackedRows.length} | ` +
       `买入总额：${EIGHT_DIGIT_FMT.format(Math.round(buyTotal))} | ` +
       `当前市值：${EIGHT_DIGIT_FMT.format(Math.round(latestTotal))} | ` +
-      `浮动盈亏：${formatCell("pnl_100", pnlTotal)} | ` +
+      `浮动盈亏：${formatCell("pnl_total", pnlTotal)} | ` +
       `收益率：${retTotal === null ? "-" : formatCell("return_since_buy_pct", retTotal)}%`;
     return;
   }
@@ -331,23 +378,28 @@ function renderNewBuyPanel(payload) {
 }
 
 async function loadPanels() {
+  let reviewRows = [];
+  let newBuyRows = [];
+
   try {
     const review = await fetchJson("/data/first_review_20.json");
-    setFirstBatchBaseline(review?.rows || []);
+    reviewRows = review?.rows || [];
     renderReviewPanel(review);
   } catch {
-    setFirstBatchBaseline([]);
     renderDataTable(el.reviewTable, [], REVIEW_HEADER_MAP);
     if (el.reviewMeta) el.reviewMeta.textContent = "复盘数据加载失败";
   }
 
   try {
     const newBuy = await fetchJson("/data/new_buy_20.json");
+    newBuyRows = newBuy?.rows || [];
     renderNewBuyPanel(newBuy);
   } catch {
     renderDataTable(el.newBuyTable, [], NEWBUY_HEADER_MAP);
     if (el.newBuyMeta) el.newBuyMeta.textContent = "新买入台账加载失败";
   }
+
+  setPortfolioBaseline(reviewRows, newBuyRows);
 }
 
 async function fetchLiveData() {
