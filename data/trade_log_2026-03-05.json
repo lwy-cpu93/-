@@ -1,0 +1,91 @@
+﻿{
+    "generated_at":  "2026-03-05 23:36:07",
+    "date":  "2026-03-05",
+    "count":  6,
+    "rows":  [
+                 {
+                     "trade_time":  "2026-03-05 23:36:07",
+                     "date":  "2026-03-05",
+                     "action":  "卖出",
+                     "code":  "000912",
+                     "name":  "泸天化",
+                     "qty":  100,
+                     "price":  5.26,
+                     "amount":  526,
+                     "ref_buy_price":  5.68,
+                     "pnl_100":  -42,
+                     "return_pct":  -7.39,
+                     "reason":  "弱势调出（回撤/跌幅靠后）"
+                 },
+                 {
+                     "trade_time":  "2026-03-05 23:36:07",
+                     "date":  "2026-03-05",
+                     "action":  "卖出",
+                     "code":  "000902",
+                     "name":  "新洋丰",
+                     "qty":  100,
+                     "price":  18.41,
+                     "amount":  1841,
+                     "ref_buy_price":  19.02,
+                     "pnl_100":  -61,
+                     "return_pct":  -3.21,
+                     "reason":  "弱势调出（回撤/跌幅靠后）"
+                 },
+                 {
+                     "trade_time":  "2026-03-05 23:36:07",
+                     "date":  "2026-03-05",
+                     "action":  "卖出",
+                     "code":  "603663",
+                     "name":  "三祥新材",
+                     "qty":  100,
+                     "price":  53.27,
+                     "amount":  5327,
+                     "ref_buy_price":  55.41,
+                     "pnl_100":  -214,
+                     "return_pct":  -3.86,
+                     "reason":  "弱势调出（回撤/跌幅靠后）"
+                 },
+                 {
+                     "trade_time":  "2026-03-05 23:36:07",
+                     "date":  "2026-03-05",
+                     "action":  "买入",
+                     "code":  "600089",
+                     "name":  "特变电工",
+                     "qty":  100,
+                     "price":  32.78,
+                     "amount":  3278,
+                     "ref_buy_price":  "",
+                     "pnl_100":  "",
+                     "return_pct":  "",
+                     "reason":  "调仓补入（高分候选）"
+                 },
+                 {
+                     "trade_time":  "2026-03-05 23:36:07",
+                     "date":  "2026-03-05",
+                     "action":  "买入",
+                     "code":  "002405",
+                     "name":  "四维图新",
+                     "qty":  100,
+                     "price":  10.78,
+                     "amount":  1078,
+                     "ref_buy_price":  "",
+                     "pnl_100":  "",
+                     "return_pct":  "",
+                     "reason":  "调仓补入（高分候选）"
+                 },
+                 {
+                     "trade_time":  "2026-03-05 23:36:07",
+                     "date":  "2026-03-05",
+                     "action":  "买入",
+                     "code":  "601611",
+                     "name":  "中国核建",
+                     "qty":  100,
+                     "price":  16.79,
+                     "amount":  1679,
+                     "ref_buy_price":  "",
+                     "pnl_100":  "",
+                     "return_pct":  "",
+                     "reason":  "调仓补入（高分候选）"
+                 }
+             ]
+}

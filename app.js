@@ -48,6 +48,20 @@ const NEWBUY_HEADER_MAP = {
   qty: "股数",
   buy_amount: "买入金额",
   latest_day_pct: "当日涨跌(%)",
+  turnover_pct: "换手率(%)",
+  volume_ratio: "量比",
+  open_pct: "开盘涨跌(%)",
+  trend_stage: "阶段",
+  start_score: "起点分",
+  history_score: "历史因子分",
+  market_score: "市场因子分",
+  stage_bias: "阶段偏置",
+  factor_score: "综合因子分",
+  history_ret60: "60日涨幅(%)",
+  history_ytd: "年初至今(%)",
+  history_amp: "振幅(%)",
+  history_turnover: "历史换手",
+  history_vol_ratio: "历史量比",
   updated_at: "更新时间"
 };
 

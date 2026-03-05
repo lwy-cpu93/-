@@ -1,4 +1,4 @@
-const CACHE_NAME = "a-share-live-v4";
+const CACHE_NAME = "a-share-live-v5";
 const STATIC_ASSETS = [
   "/",
   "/index.html",
@@ -8,7 +8,9 @@ const STATIC_ASSETS = [
   "/codes.json",
   "/data/first_review_20.json",
   "/data/new_buy_20.json",
-  "/data/analysis_latest.md"
+  "/data/analysis_latest.md",
+  "/data/trade_log_latest.csv",
+  "/data/trade_log_latest.json"
 ];
 
 self.addEventListener("install", event => {
