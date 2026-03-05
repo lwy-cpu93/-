@@ -28,11 +28,16 @@ const REVIEW_HEADER_MAP = {
   code: "代码",
   name: "名称",
   industry: "行业",
+  sources: "来源",
+  buy_dates: "买入日期",
+  hold_qty: "持仓股数",
+  avg_buy_price: "持仓均价",
   reason_tag: "归因标签",
   buy_date: "买入日期",
   buy_price: "买入价",
   latest_price: "最新价",
   change_pct_since_buy: "区间涨跌(%)",
+  pnl_total: "持仓盈亏",
   pnl_100: "100股盈亏",
   latest_day_pct: "当日涨跌(%)",
   updated_at: "更新时间"
@@ -392,16 +397,35 @@ function renderNewBuyPanel(payload) {
 }
 
 async function loadPanels() {
+  let baselineRows = [];
   let reviewRows = [];
   let newBuyRows = [];
 
   try {
-    const review = await fetchJson("/data/first_review_20.json");
+    const baseline = await fetchJson("/data/first_review_20.json");
+    baselineRows = baseline?.rows || [];
+  } catch {
+    baselineRows = [];
+  }
+
+  try {
+    const review = await fetchJson("/data/portfolio_review_all.json");
     reviewRows = review?.rows || [];
     renderReviewPanel(review);
   } catch {
-    renderDataTable(el.reviewTable, [], REVIEW_HEADER_MAP);
-    if (el.reviewMeta) el.reviewMeta.textContent = "复盘数据加载失败";
+    if (baselineRows.length > 0) {
+      renderReviewPanel({
+        generated_at: "",
+        summary: {},
+        rows: baselineRows
+      });
+      if (el.reviewMeta) {
+        el.reviewMeta.textContent = "全部持仓复盘加载失败，已回退到第一批复盘。";
+      }
+    } else {
+      renderDataTable(el.reviewTable, [], REVIEW_HEADER_MAP);
+      if (el.reviewMeta) el.reviewMeta.textContent = "复盘数据加载失败";
+    }
   }
 
   try {
@@ -413,7 +437,7 @@ async function loadPanels() {
     if (el.newBuyMeta) el.newBuyMeta.textContent = "新买入台账加载失败";
   }
 
-  setPortfolioBaseline(reviewRows, newBuyRows);
+  setPortfolioBaseline(baselineRows, newBuyRows);
 }
 
 async function fetchLiveData() {
