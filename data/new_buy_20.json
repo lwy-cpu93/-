@@ -4,7 +4,7 @@
     "strategy":  "mainboard adaptive factor model (daily feedback -\u003e dynamic weights)",
     "summary":  {
                     "count":  10,
-                    "total_buy_amount":  25914,
+                    "total_buy_amount":  28177,
                     "start_stage_count":  2,
                     "rebound_stage_count":  8,
                     "steady_stage_count":  0,
@@ -16,7 +16,8 @@
                     "feedback_avg_return_pct":  -2.185,
                     "feedback_win_rate_pct":  15,
                     "manual_rebalance":  "yes",
-                    "manual_rebalance_time":  "2026-03-09 22:57:15"
+                    "manual_rebalance_time":  "2026-03-09 23:24:44",
+                    "manual_rebalance_mode":  "structure_optimize"
                 },
     "rows":  [
                  {
@@ -24,8 +25,8 @@
                      "code":  "601778",
                      "name":  "晶科科技",
                      "buy_price":  5.1,
-                     "qty":  100,
-                     "buy_amount":  510,
+                     "qty":  200,
+                     "buy_amount":  1020,
                      "latest_day_pct":  4.72,
                      "amount":  2049509625,
                      "turnover_pct":  11.39,
@@ -51,8 +52,8 @@
                      "code":  "603070",
                      "name":  "万控智造",
                      "buy_price":  17.53,
-                     "qty":  100,
-                     "buy_amount":  1753,
+                     "qty":  200,
+                     "buy_amount":  3506,
                      "latest_day_pct":  5.1,
                      "amount":  349520898,
                      "turnover_pct":  5.12,

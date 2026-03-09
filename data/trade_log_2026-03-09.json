@@ -1,7 +1,7 @@
 ﻿{
-    "generated_at":  "2026-03-09 22:57:15",
+    "generated_at":  "2026-03-09 23:24:44",
     "date":  "2026-03-09",
-    "count":  6,
+    "count":  10,
     "rows":  [
                  {
                      "trade_time":  "2026-03-09 22:57:15",
@@ -86,6 +86,62 @@
                      "pnl_100":  "",
                      "return_pct":  "",
                      "reason":  "调仓补入（高分候选）"
+                 },
+                 {
+                     "trade_time":  "2026-03-09 23:24:12",
+                     "date":  "2026-03-09",
+                     "action":  "卖出",
+                     "code":  "600389",
+                     "name":  "江山股份",
+                     "qty":  100,
+                     "price":  29.37,
+                     "amount":  2937,
+                     "ref_buy_price":  30.5,
+                     "pnl_100":  -113,
+                     "return_pct":  -3.7,
+                     "reason":  "结构优化调仓（提高收益）"
+                 },
+                 {
+                     "trade_time":  "2026-03-09 23:24:12",
+                     "date":  "2026-03-09",
+                     "action":  "买入",
+                     "code":  "603070",
+                     "name":  "万控智造",
+                     "qty":  100,
+                     "price":  17.53,
+                     "amount":  1753,
+                     "ref_buy_price":  "",
+                     "pnl_100":  "",
+                     "return_pct":  "",
+                     "reason":  "结构优化加仓（高分先跌后涨）"
+                 },
+                 {
+                     "trade_time":  "2026-03-09 23:24:44",
+                     "date":  "2026-03-09",
+                     "action":  "卖出",
+                     "code":  "002413",
+                     "name":  "雷科防务",
+                     "qty":  100,
+                     "price":  15.66,
+                     "amount":  1566,
+                     "ref_buy_price":  16.36,
+                     "pnl_100":  -70,
+                     "return_pct":  -4.28,
+                     "reason":  "结构优化调仓（提高收益）"
+                 },
+                 {
+                     "trade_time":  "2026-03-09 23:24:44",
+                     "date":  "2026-03-09",
+                     "action":  "买入",
+                     "code":  "601778",
+                     "name":  "晶科科技",
+                     "qty":  100,
+                     "price":  5.1,
+                     "amount":  510,
+                     "ref_buy_price":  "",
+                     "pnl_100":  "",
+                     "return_pct":  "",
+                     "reason":  "结构优化加仓（高分先跌后涨）"
                  }
              ]
 }
