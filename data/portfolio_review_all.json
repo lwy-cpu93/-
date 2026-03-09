@@ -1,14 +1,14 @@
 ﻿{
-    "generated_at":  "2026-03-09 22:52:17",
+    "generated_at":  "2026-03-09 22:57:15",
     "source":  "portfolio_prev + first_review_20 + new_buy_20 + Eastmoney ulist.np",
     "portfolio":  "all_current_holdings",
     "summary":  {
                     "count":  30,
                     "total_hold_qty":  3000,
-                    "total_buy_amount":  50262,
-                    "total_latest_amount":  50948,
-                    "total_pnl":  686,
-                    "total_return_pct":  1.36,
+                    "total_buy_amount":  53721,
+                    "total_latest_amount":  54696,
+                    "total_pnl":  975,
+                    "total_return_pct":  1.81,
                     "win_count":  15,
                     "lose_count":  15
                 },
@@ -26,7 +26,7 @@
                      "pnl_total":  -39,
                      "pnl_100":  -39,
                      "latest_day_pct":  0.26,
-                     "updated_at":  "2026-03-09 22:52:17"
+                     "updated_at":  "2026-03-09 22:57:15"
                  },
                  {
                      "code":  "000554",
@@ -41,7 +41,7 @@
                      "pnl_total":  55,
                      "pnl_100":  55,
                      "latest_day_pct":  0.29,
-                     "updated_at":  "2026-03-09 22:52:17"
+                     "updated_at":  "2026-03-09 22:57:15"
                  },
                  {
                      "code":  "000890",
@@ -56,7 +56,7 @@
                      "pnl_total":  48,
                      "pnl_100":  48,
                      "latest_day_pct":  -1.55,
-                     "updated_at":  "2026-03-09 22:52:17"
+                     "updated_at":  "2026-03-09 22:57:15"
                  },
                  {
                      "code":  "000912",
@@ -71,22 +71,22 @@
                      "pnl_total":  41,
                      "pnl_100":  41,
                      "latest_day_pct":  3.97,
-                     "updated_at":  "2026-03-09 22:52:17"
+                     "updated_at":  "2026-03-09 22:57:15"
                  },
                  {
-                     "code":  "000949",
-                     "name":  "新乡化纤",
-                     "industry":  "化学纤维",
+                     "code":  "000993",
+                     "name":  "闽东电力",
+                     "industry":  "电力",
                      "sources":  "再选/调仓",
-                     "buy_dates":  "2026-03-05",
+                     "buy_dates":  "2026-03-09",
                      "hold_qty":  100,
-                     "avg_buy_price":  7.25,
-                     "latest_price":  6.9,
-                     "change_pct_since_buy":  -4.83,
-                     "pnl_total":  -35,
-                     "pnl_100":  -35,
-                     "latest_day_pct":  -7.01,
-                     "updated_at":  "2026-03-09 22:52:17"
+                     "avg_buy_price":  15.25,
+                     "latest_price":  15.25,
+                     "change_pct_since_buy":  0,
+                     "pnl_total":  0,
+                     "pnl_100":  0,
+                     "latest_day_pct":  5.46,
+                     "updated_at":  "2026-03-09 22:57:15"
                  },
                  {
                      "code":  "002121",
@@ -101,7 +101,7 @@
                      "pnl_total":  28,
                      "pnl_100":  28,
                      "latest_day_pct":  3.13,
-                     "updated_at":  "2026-03-09 22:52:17"
+                     "updated_at":  "2026-03-09 22:57:15"
                  },
                  {
                      "code":  "002380",
@@ -116,7 +116,7 @@
                      "pnl_total":  0,
                      "pnl_100":  0,
                      "latest_day_pct":  5.97,
-                     "updated_at":  "2026-03-09 22:52:17"
+                     "updated_at":  "2026-03-09 22:57:15"
                  },
                  {
                      "code":  "002405",
@@ -131,7 +131,7 @@
                      "pnl_total":  -3,
                      "pnl_100":  -3,
                      "latest_day_pct":  1.9,
-                     "updated_at":  "2026-03-09 22:52:17"
+                     "updated_at":  "2026-03-09 22:57:15"
                  },
                  {
                      "code":  "002413",
@@ -146,7 +146,7 @@
                      "pnl_total":  -70,
                      "pnl_100":  -70,
                      "latest_day_pct":  0.13,
-                     "updated_at":  "2026-03-09 22:52:17"
+                     "updated_at":  "2026-03-09 22:57:15"
                  },
                  {
                      "code":  "002452",
@@ -161,22 +161,7 @@
                      "pnl_total":  -27,
                      "pnl_100":  -27,
                      "latest_day_pct":  -2.24,
-                     "updated_at":  "2026-03-09 22:52:17"
-                 },
-                 {
-                     "code":  "002734",
-                     "name":  "利民股份",
-                     "industry":  "农化制品",
-                     "sources":  "再选/调仓",
-                     "buy_dates":  "2026-03-06",
-                     "hold_qty":  100,
-                     "avg_buy_price":  21.77,
-                     "latest_price":  20.6,
-                     "change_pct_since_buy":  -5.37,
-                     "pnl_total":  -117,
-                     "pnl_100":  -117,
-                     "latest_day_pct":  -5.37,
-                     "updated_at":  "2026-03-09 22:52:17"
+                     "updated_at":  "2026-03-09 22:57:15"
                  },
                  {
                      "code":  "002897",
@@ -191,7 +176,22 @@
                      "pnl_total":  123,
                      "pnl_100":  123,
                      "latest_day_pct":  -0.36,
-                     "updated_at":  "2026-03-09 22:52:17"
+                     "updated_at":  "2026-03-09 22:57:15"
+                 },
+                 {
+                     "code":  "002929",
+                     "name":  "润建股份",
+                     "industry":  "通信服务",
+                     "sources":  "再选/调仓",
+                     "buy_dates":  "2026-03-09",
+                     "hold_qty":  100,
+                     "avg_buy_price":  53.08,
+                     "latest_price":  53.08,
+                     "change_pct_since_buy":  0,
+                     "pnl_total":  0,
+                     "pnl_100":  0,
+                     "latest_day_pct":  5.34,
+                     "updated_at":  "2026-03-09 22:57:15"
                  },
                  {
                      "code":  "600028",
@@ -206,7 +206,7 @@
                      "pnl_total":  -11,
                      "pnl_100":  -11,
                      "latest_day_pct":  1.74,
-                     "updated_at":  "2026-03-09 22:52:17"
+                     "updated_at":  "2026-03-09 22:57:15"
                  },
                  {
                      "code":  "600089",
@@ -221,7 +221,7 @@
                      "pnl_total":  -2,
                      "pnl_100":  -2,
                      "latest_day_pct":  1.64,
-                     "updated_at":  "2026-03-09 22:52:17"
+                     "updated_at":  "2026-03-09 22:57:15"
                  },
                  {
                      "code":  "600108",
@@ -236,7 +236,7 @@
                      "pnl_total":  106,
                      "pnl_100":  106,
                      "latest_day_pct":  -1.63,
-                     "updated_at":  "2026-03-09 22:52:17"
+                     "updated_at":  "2026-03-09 22:57:15"
                  },
                  {
                      "code":  "600227",
@@ -251,7 +251,7 @@
                      "pnl_total":  45,
                      "pnl_100":  45,
                      "latest_day_pct":  10.03,
-                     "updated_at":  "2026-03-09 22:52:17"
+                     "updated_at":  "2026-03-09 22:57:15"
                  },
                  {
                      "code":  "600256",
@@ -266,7 +266,7 @@
                      "pnl_total":  62,
                      "pnl_100":  62,
                      "latest_day_pct":  4.26,
-                     "updated_at":  "2026-03-09 22:52:17"
+                     "updated_at":  "2026-03-09 22:57:15"
                  },
                  {
                      "code":  "600389",
@@ -281,22 +281,7 @@
                      "pnl_total":  -113,
                      "pnl_100":  -113,
                      "latest_day_pct":  -3.7,
-                     "updated_at":  "2026-03-09 22:52:17"
-                 },
-                 {
-                     "code":  "600435",
-                     "name":  "北方导航",
-                     "industry":  "地面兵装Ⅱ",
-                     "sources":  "第一批+再选/调仓",
-                     "buy_dates":  "2026-03-02/2026-03-05",
-                     "hold_qty":  100,
-                     "avg_buy_price":  18.74,
-                     "latest_price":  17.37,
-                     "change_pct_since_buy":  -7.31,
-                     "pnl_total":  -137,
-                     "pnl_100":  -137,
-                     "latest_day_pct":  -2.69,
-                     "updated_at":  "2026-03-09 22:52:17"
+                     "updated_at":  "2026-03-09 22:57:15"
                  },
                  {
                      "code":  "600452",
@@ -311,7 +296,7 @@
                      "pnl_total":  171,
                      "pnl_100":  171,
                      "latest_day_pct":  4.95,
-                     "updated_at":  "2026-03-09 22:52:17"
+                     "updated_at":  "2026-03-09 22:57:15"
                  },
                  {
                      "code":  "600688",
@@ -326,7 +311,7 @@
                      "pnl_total":  5,
                      "pnl_100":  5,
                      "latest_day_pct":  0.28,
-                     "updated_at":  "2026-03-09 22:52:17"
+                     "updated_at":  "2026-03-09 22:57:15"
                  },
                  {
                      "code":  "600714",
@@ -341,7 +326,7 @@
                      "pnl_total":  226,
                      "pnl_100":  226,
                      "latest_day_pct":  -10.01,
-                     "updated_at":  "2026-03-09 22:52:17"
+                     "updated_at":  "2026-03-09 22:57:15"
                  },
                  {
                      "code":  "600722",
@@ -356,7 +341,7 @@
                      "pnl_total":  291,
                      "pnl_100":  291,
                      "latest_day_pct":  -2.22,
-                     "updated_at":  "2026-03-09 22:52:17"
+                     "updated_at":  "2026-03-09 22:57:15"
                  },
                  {
                      "code":  "600968",
@@ -371,7 +356,7 @@
                      "pnl_total":  0,
                      "pnl_100":  0,
                      "latest_day_pct":  0,
-                     "updated_at":  "2026-03-09 22:52:17"
+                     "updated_at":  "2026-03-09 22:57:15"
                  },
                  {
                      "code":  "601611",
@@ -386,7 +371,7 @@
                      "pnl_total":  44,
                      "pnl_100":  44,
                      "latest_day_pct":  4.05,
-                     "updated_at":  "2026-03-09 22:52:17"
+                     "updated_at":  "2026-03-09 22:57:15"
                  },
                  {
                      "code":  "601778",
@@ -401,7 +386,7 @@
                      "pnl_total":  0,
                      "pnl_100":  0,
                      "latest_day_pct":  4.72,
-                     "updated_at":  "2026-03-09 22:52:17"
+                     "updated_at":  "2026-03-09 22:57:15"
                  },
                  {
                      "code":  "601808",
@@ -416,7 +401,7 @@
                      "pnl_total":  65,
                      "pnl_100":  65,
                      "latest_day_pct":  2.51,
-                     "updated_at":  "2026-03-09 22:52:17"
+                     "updated_at":  "2026-03-09 22:57:15"
                  },
                  {
                      "code":  "601857",
@@ -431,7 +416,7 @@
                      "pnl_total":  97,
                      "pnl_100":  97,
                      "latest_day_pct":  5.04,
-                     "updated_at":  "2026-03-09 22:52:17"
+                     "updated_at":  "2026-03-09 22:57:15"
                  },
                  {
                      "code":  "603009",
@@ -446,7 +431,7 @@
                      "pnl_total":  -167,
                      "pnl_100":  -167,
                      "latest_day_pct":  -5.4,
-                     "updated_at":  "2026-03-09 22:52:17"
+                     "updated_at":  "2026-03-09 22:57:15"
                  },
                  {
                      "code":  "603070",
@@ -461,7 +446,22 @@
                      "pnl_total":  0,
                      "pnl_100":  0,
                      "latest_day_pct":  5.1,
-                     "updated_at":  "2026-03-09 22:52:17"
+                     "updated_at":  "2026-03-09 22:57:15"
+                 },
+                 {
+                     "code":  "603588",
+                     "name":  "高能环境",
+                     "industry":  "环境治理",
+                     "sources":  "再选/调仓",
+                     "buy_dates":  "2026-03-09",
+                     "hold_qty":  100,
+                     "avg_buy_price":  14.02,
+                     "latest_price":  14.02,
+                     "change_pct_since_buy":  0,
+                     "pnl_total":  0,
+                     "pnl_100":  0,
+                     "latest_day_pct":  4.63,
+                     "updated_at":  "2026-03-09 22:57:15"
                  }
              ]
 }
