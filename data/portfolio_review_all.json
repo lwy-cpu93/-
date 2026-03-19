@@ -1,16 +1,16 @@
 ﻿{
-    "generated_at":  "2026-03-18 22:55:17",
+    "generated_at":  "2026-03-19 23:34:34",
     "source":  "portfolio_prev + first_review_20 + new_buy_20 + Eastmoney ulist.np",
     "portfolio":  "all_current_holdings",
     "summary":  {
                     "count":  29,
                     "total_hold_qty":  3000,
-                    "total_buy_amount":  52899,
-                    "total_latest_amount":  54329,
-                    "total_pnl":  1430,
-                    "total_return_pct":  2.7,
-                    "win_count":  14,
-                    "lose_count":  15
+                    "total_buy_amount":  53526,
+                    "total_latest_amount":  53998,
+                    "total_pnl":  472,
+                    "total_return_pct":  0.88,
+                    "win_count":  12,
+                    "lose_count":  17
                 },
     "rows":  [
                  {
@@ -21,12 +21,12 @@
                      "buy_dates":  "2026-03-16",
                      "hold_qty":  100,
                      "avg_buy_price":  33.1,
-                     "latest_price":  33.63,
-                     "change_pct_since_buy":  1.6,
-                     "pnl_total":  53,
-                     "pnl_100":  53,
-                     "latest_day_pct":  4.25,
-                     "updated_at":  "2026-03-18 22:55:17"
+                     "latest_price":  32.43,
+                     "change_pct_since_buy":  -2.02,
+                     "pnl_total":  -67,
+                     "pnl_100":  -67,
+                     "latest_day_pct":  -3.57,
+                     "updated_at":  "2026-03-19 23:34:34"
                  },
                  {
                      "code":  "000818",
@@ -36,12 +36,12 @@
                      "buy_dates":  "2026-03-18",
                      "hold_qty":  100,
                      "avg_buy_price":  24.12,
-                     "latest_price":  24.12,
-                     "change_pct_since_buy":  0,
-                     "pnl_total":  0,
-                     "pnl_100":  0,
-                     "latest_day_pct":  6.49,
-                     "updated_at":  "2026-03-18 22:55:17"
+                     "latest_price":  24,
+                     "change_pct_since_buy":  -0.5,
+                     "pnl_total":  -12,
+                     "pnl_100":  -12,
+                     "latest_day_pct":  -0.5,
+                     "updated_at":  "2026-03-19 23:34:34"
                  },
                  {
                      "code":  "000890",
@@ -51,12 +51,12 @@
                      "buy_dates":  "2026-03-02",
                      "hold_qty":  100,
                      "avg_buy_price":  8.43,
-                     "latest_price":  13.6,
-                     "change_pct_since_buy":  61.33,
-                     "pnl_total":  517,
-                     "pnl_100":  517,
-                     "latest_day_pct":  1.34,
-                     "updated_at":  "2026-03-18 22:55:17"
+                     "latest_price":  14,
+                     "change_pct_since_buy":  66.07,
+                     "pnl_total":  557,
+                     "pnl_100":  557,
+                     "latest_day_pct":  2.94,
+                     "updated_at":  "2026-03-19 23:34:34"
                  },
                  {
                      "code":  "000912",
@@ -66,27 +66,27 @@
                      "buy_dates":  "2026-03-02",
                      "hold_qty":  100,
                      "avg_buy_price":  5.35,
-                     "latest_price":  5.82,
-                     "change_pct_since_buy":  8.79,
-                     "pnl_total":  47,
-                     "pnl_100":  47,
-                     "latest_day_pct":  -10.05,
-                     "updated_at":  "2026-03-18 22:55:17"
+                     "latest_price":  5.55,
+                     "change_pct_since_buy":  3.74,
+                     "pnl_total":  20,
+                     "pnl_100":  20,
+                     "latest_day_pct":  -4.64,
+                     "updated_at":  "2026-03-19 23:34:34"
                  },
                  {
-                     "code":  "002121",
-                     "name":  "科陆电子",
-                     "industry":  "电网设备",
+                     "code":  "002082",
+                     "name":  "万邦德",
+                     "industry":  "化学制药",
                      "sources":  "再选/调仓",
-                     "buy_dates":  "2026-03-05",
+                     "buy_dates":  "2026-03-19",
                      "hold_qty":  100,
-                     "avg_buy_price":  9.62,
-                     "latest_price":  9.07,
-                     "change_pct_since_buy":  -5.72,
-                     "pnl_total":  -55,
-                     "pnl_100":  -55,
-                     "latest_day_pct":  0.89,
-                     "updated_at":  "2026-03-18 22:55:17"
+                     "avg_buy_price":  18.8,
+                     "latest_price":  18.8,
+                     "change_pct_since_buy":  0,
+                     "pnl_total":  0,
+                     "pnl_100":  0,
+                     "latest_day_pct":  5.98,
+                     "updated_at":  "2026-03-19 23:34:34"
                  },
                  {
                      "code":  "002405",
@@ -96,27 +96,12 @@
                      "buy_dates":  "2026-03-05",
                      "hold_qty":  100,
                      "avg_buy_price":  10.78,
-                     "latest_price":  10.67,
-                     "change_pct_since_buy":  -1.02,
-                     "pnl_total":  -11,
-                     "pnl_100":  -11,
-                     "latest_day_pct":  -1.2,
-                     "updated_at":  "2026-03-18 22:55:17"
-                 },
-                 {
-                     "code":  "002452",
-                     "name":  "长高电新",
-                     "industry":  "电网设备",
-                     "sources":  "再选/调仓",
-                     "buy_dates":  "2026-03-06",
-                     "hold_qty":  100,
-                     "avg_buy_price":  12.08,
-                     "latest_price":  11.52,
-                     "change_pct_since_buy":  -4.64,
-                     "pnl_total":  -56,
-                     "pnl_100":  -56,
-                     "latest_day_pct":  -0.86,
-                     "updated_at":  "2026-03-18 22:55:17"
+                     "latest_price":  11.18,
+                     "change_pct_since_buy":  3.71,
+                     "pnl_total":  40,
+                     "pnl_100":  40,
+                     "latest_day_pct":  4.78,
+                     "updated_at":  "2026-03-19 23:34:34"
                  },
                  {
                      "code":  "002463",
@@ -126,12 +111,12 @@
                      "buy_dates":  "2026-03-18",
                      "hold_qty":  100,
                      "avg_buy_price":  91,
-                     "latest_price":  91,
-                     "change_pct_since_buy":  0,
-                     "pnl_total":  0,
-                     "pnl_100":  0,
-                     "latest_day_pct":  6.32,
-                     "updated_at":  "2026-03-18 22:55:17"
+                     "latest_price":  86.33,
+                     "change_pct_since_buy":  -5.13,
+                     "pnl_total":  -467,
+                     "pnl_100":  -467,
+                     "latest_day_pct":  -5.13,
+                     "updated_at":  "2026-03-19 23:34:34"
                  },
                  {
                      "code":  "002631",
@@ -141,42 +126,42 @@
                      "buy_dates":  "2026-03-12",
                      "hold_qty":  100,
                      "avg_buy_price":  7.32,
-                     "latest_price":  7.4,
-                     "change_pct_since_buy":  1.09,
-                     "pnl_total":  8,
-                     "pnl_100":  8,
-                     "latest_day_pct":  1.51,
-                     "updated_at":  "2026-03-18 22:55:17"
+                     "latest_price":  7.01,
+                     "change_pct_since_buy":  -4.23,
+                     "pnl_total":  -31,
+                     "pnl_100":  -31,
+                     "latest_day_pct":  -5.27,
+                     "updated_at":  "2026-03-19 23:34:34"
                  },
                  {
                      "code":  "002655",
                      "name":  "共达电声",
-                     "industry":  "消费电子",
+                     "industry":  "未知行业",
                      "sources":  "再选/调仓",
                      "buy_dates":  "2026-03-16",
                      "hold_qty":  100,
                      "avg_buy_price":  17.78,
-                     "latest_price":  18.07,
-                     "change_pct_since_buy":  1.63,
-                     "pnl_total":  29,
-                     "pnl_100":  29,
-                     "latest_day_pct":  5.18,
-                     "updated_at":  "2026-03-18 22:55:17"
+                     "latest_price":  17.66,
+                     "change_pct_since_buy":  -0.67,
+                     "pnl_total":  -12,
+                     "pnl_100":  -12,
+                     "latest_day_pct":  -2.27,
+                     "updated_at":  "2026-03-19 23:34:34"
                  },
                  {
                      "code":  "002772",
                      "name":  "众兴菌业",
-                     "industry":  "种植业",
+                     "industry":  "未知行业",
                      "sources":  "再选/调仓",
                      "buy_dates":  "2026-03-13",
                      "hold_qty":  100,
                      "avg_buy_price":  19.57,
-                     "latest_price":  18.35,
-                     "change_pct_since_buy":  -6.23,
-                     "pnl_total":  -122,
-                     "pnl_100":  -122,
-                     "latest_day_pct":  2.23,
-                     "updated_at":  "2026-03-18 22:55:17"
+                     "latest_price":  18.28,
+                     "change_pct_since_buy":  -6.59,
+                     "pnl_total":  -129,
+                     "pnl_100":  -129,
+                     "latest_day_pct":  -0.38,
+                     "updated_at":  "2026-03-19 23:34:34"
                  },
                  {
                      "code":  "002792",
@@ -186,12 +171,12 @@
                      "buy_dates":  "2026-03-18",
                      "hold_qty":  100,
                      "avg_buy_price":  41.67,
-                     "latest_price":  41.67,
-                     "change_pct_since_buy":  0,
-                     "pnl_total":  0,
-                     "pnl_100":  0,
-                     "latest_day_pct":  6.11,
-                     "updated_at":  "2026-03-18 22:55:17"
+                     "latest_price":  41.08,
+                     "change_pct_since_buy":  -1.42,
+                     "pnl_total":  -59,
+                     "pnl_100":  -59,
+                     "latest_day_pct":  -1.42,
+                     "updated_at":  "2026-03-19 23:34:34"
                  },
                  {
                      "code":  "002897",
@@ -201,12 +186,12 @@
                      "buy_dates":  "2026-03-05",
                      "hold_qty":  100,
                      "avg_buy_price":  68.52,
-                     "latest_price":  66.66,
-                     "change_pct_since_buy":  -2.71,
-                     "pnl_total":  -186,
-                     "pnl_100":  -186,
-                     "latest_day_pct":  8.39,
-                     "updated_at":  "2026-03-18 22:55:17"
+                     "latest_price":  65,
+                     "change_pct_since_buy":  -5.14,
+                     "pnl_total":  -352,
+                     "pnl_100":  -352,
+                     "latest_day_pct":  -2.49,
+                     "updated_at":  "2026-03-19 23:34:34"
                  },
                  {
                      "code":  "600108",
@@ -216,12 +201,12 @@
                      "buy_dates":  "2026-03-02",
                      "hold_qty":  100,
                      "avg_buy_price":  4.37,
-                     "latest_price":  5.61,
-                     "change_pct_since_buy":  28.38,
-                     "pnl_total":  124,
-                     "pnl_100":  124,
-                     "latest_day_pct":  -2.6,
-                     "updated_at":  "2026-03-18 22:55:17"
+                     "latest_price":  5.29,
+                     "change_pct_since_buy":  21.05,
+                     "pnl_total":  92,
+                     "pnl_100":  92,
+                     "latest_day_pct":  -5.7,
+                     "updated_at":  "2026-03-19 23:34:34"
                  },
                  {
                      "code":  "600110",
@@ -231,17 +216,17 @@
                      "buy_dates":  "2026-03-12",
                      "hold_qty":  100,
                      "avg_buy_price":  8.2,
-                     "latest_price":  8.1,
-                     "change_pct_since_buy":  -1.22,
-                     "pnl_total":  -10,
-                     "pnl_100":  -10,
-                     "latest_day_pct":  1.12,
-                     "updated_at":  "2026-03-18 22:55:17"
+                     "latest_price":  7.67,
+                     "change_pct_since_buy":  -6.46,
+                     "pnl_total":  -53,
+                     "pnl_100":  -53,
+                     "latest_day_pct":  -5.31,
+                     "updated_at":  "2026-03-19 23:34:34"
                  },
                  {
                      "code":  "600157",
                      "name":  "永泰能源",
-                     "industry":  "未知行业",
+                     "industry":  "电力",
                      "sources":  "再选/调仓",
                      "buy_dates":  "2026-03-11",
                      "hold_qty":  100,
@@ -250,8 +235,8 @@
                      "change_pct_since_buy":  -5.1,
                      "pnl_total":  -10,
                      "pnl_100":  -10,
-                     "latest_day_pct":  -0.53,
-                     "updated_at":  "2026-03-18 22:55:17"
+                     "latest_day_pct":  0,
+                     "updated_at":  "2026-03-19 23:34:34"
                  },
                  {
                      "code":  "600227",
@@ -261,12 +246,12 @@
                      "buy_dates":  "2026-03-02",
                      "hold_qty":  100,
                      "avg_buy_price":  3.17,
-                     "latest_price":  5,
-                     "change_pct_since_buy":  57.73,
-                     "pnl_total":  183,
-                     "pnl_100":  183,
-                     "latest_day_pct":  -5.48,
-                     "updated_at":  "2026-03-18 22:55:17"
+                     "latest_price":  4.67,
+                     "change_pct_since_buy":  47.32,
+                     "pnl_total":  150,
+                     "pnl_100":  150,
+                     "latest_day_pct":  -6.6,
+                     "updated_at":  "2026-03-19 23:34:34"
                  },
                  {
                      "code":  "600256",
@@ -276,12 +261,12 @@
                      "buy_dates":  "2026-03-02",
                      "hold_qty":  100,
                      "avg_buy_price":  6.47,
-                     "latest_price":  6.79,
-                     "change_pct_since_buy":  4.95,
-                     "pnl_total":  32,
-                     "pnl_100":  32,
-                     "latest_day_pct":  -3,
-                     "updated_at":  "2026-03-18 22:55:17"
+                     "latest_price":  7.12,
+                     "change_pct_since_buy":  10.05,
+                     "pnl_total":  65,
+                     "pnl_100":  65,
+                     "latest_day_pct":  4.86,
+                     "updated_at":  "2026-03-19 23:34:34"
                  },
                  {
                      "code":  "600452",
@@ -291,12 +276,12 @@
                      "buy_dates":  "2026-03-02",
                      "hold_qty":  100,
                      "avg_buy_price":  14.61,
-                     "latest_price":  13.79,
-                     "change_pct_since_buy":  -5.61,
-                     "pnl_total":  -82,
-                     "pnl_100":  -82,
-                     "latest_day_pct":  0.36,
-                     "updated_at":  "2026-03-18 22:55:17"
+                     "latest_price":  13.77,
+                     "change_pct_since_buy":  -5.75,
+                     "pnl_total":  -84,
+                     "pnl_100":  -84,
+                     "latest_day_pct":  -0.15,
+                     "updated_at":  "2026-03-19 23:34:34"
                  },
                  {
                      "code":  "600703",
@@ -306,12 +291,12 @@
                      "buy_dates":  "2026-03-12",
                      "hold_qty":  100,
                      "avg_buy_price":  17.04,
-                     "latest_price":  16.87,
-                     "change_pct_since_buy":  -1,
-                     "pnl_total":  -17,
-                     "pnl_100":  -17,
-                     "latest_day_pct":  1.87,
-                     "updated_at":  "2026-03-18 22:55:17"
+                     "latest_price":  16.6,
+                     "change_pct_since_buy":  -2.58,
+                     "pnl_total":  -44,
+                     "pnl_100":  -44,
+                     "latest_day_pct":  -1.6,
+                     "updated_at":  "2026-03-19 23:34:34"
                  },
                  {
                      "code":  "600714",
@@ -321,12 +306,12 @@
                      "buy_dates":  "2026-03-02",
                      "hold_qty":  100,
                      "avg_buy_price":  19.76,
-                     "latest_price":  22.85,
-                     "change_pct_since_buy":  15.64,
-                     "pnl_total":  309,
-                     "pnl_100":  309,
-                     "latest_day_pct":  -9,
-                     "updated_at":  "2026-03-18 22:55:17"
+                     "latest_price":  21.35,
+                     "change_pct_since_buy":  8.05,
+                     "pnl_total":  159,
+                     "pnl_100":  159,
+                     "latest_day_pct":  -6.56,
+                     "updated_at":  "2026-03-19 23:34:34"
                  },
                  {
                      "code":  "600722",
@@ -336,12 +321,12 @@
                      "buy_dates":  "2026-03-02",
                      "hold_qty":  100,
                      "avg_buy_price":  10.32,
-                     "latest_price":  17.37,
-                     "change_pct_since_buy":  68.31,
-                     "pnl_total":  705,
-                     "pnl_100":  705,
-                     "latest_day_pct":  -10,
-                     "updated_at":  "2026-03-18 22:55:17"
+                     "latest_price":  17.93,
+                     "change_pct_since_buy":  73.74,
+                     "pnl_total":  761,
+                     "pnl_100":  761,
+                     "latest_day_pct":  3.22,
+                     "updated_at":  "2026-03-19 23:34:34"
                  },
                  {
                      "code":  "600956",
@@ -351,27 +336,12 @@
                      "buy_dates":  "2026-03-16",
                      "hold_qty":  100,
                      "avg_buy_price":  10.2,
-                     "latest_price":  10.45,
-                     "change_pct_since_buy":  2.45,
-                     "pnl_total":  25,
-                     "pnl_100":  25,
-                     "latest_day_pct":  -2.52,
-                     "updated_at":  "2026-03-18 22:55:17"
-                 },
-                 {
-                     "code":  "601611",
-                     "name":  "中国核建",
-                     "industry":  "基础建设",
-                     "sources":  "再选/调仓",
-                     "buy_dates":  "2026-03-05",
-                     "hold_qty":  100,
-                     "avg_buy_price":  16.79,
-                     "latest_price":  16.13,
-                     "change_pct_since_buy":  -3.93,
-                     "pnl_total":  -66,
-                     "pnl_100":  -66,
-                     "latest_day_pct":  -1.83,
-                     "updated_at":  "2026-03-18 22:55:17"
+                     "latest_price":  10.03,
+                     "change_pct_since_buy":  -1.67,
+                     "pnl_total":  -17,
+                     "pnl_100":  -17,
+                     "latest_day_pct":  -4.02,
+                     "updated_at":  "2026-03-19 23:34:34"
                  },
                  {
                      "code":  "601778",
@@ -381,12 +351,12 @@
                      "buy_dates":  "2026-03-09",
                      "hold_qty":  200,
                      "avg_buy_price":  5.1,
-                     "latest_price":  5.32,
-                     "change_pct_since_buy":  4.31,
-                     "pnl_total":  44,
-                     "pnl_100":  22,
-                     "latest_day_pct":  -0.75,
-                     "updated_at":  "2026-03-18 22:55:17"
+                     "latest_price":  5.4,
+                     "change_pct_since_buy":  5.88,
+                     "pnl_total":  60,
+                     "pnl_100":  30,
+                     "latest_day_pct":  1.5,
+                     "updated_at":  "2026-03-19 23:34:34"
                  },
                  {
                      "code":  "601857",
@@ -396,12 +366,12 @@
                      "buy_dates":  "2026-03-02",
                      "hold_qty":  100,
                      "avg_buy_price":  11.95,
-                     "latest_price":  11.86,
-                     "change_pct_since_buy":  -0.75,
-                     "pnl_total":  -9,
-                     "pnl_100":  -9,
-                     "latest_day_pct":  -1.33,
-                     "updated_at":  "2026-03-18 22:55:17"
+                     "latest_price":  12.48,
+                     "change_pct_since_buy":  4.44,
+                     "pnl_total":  53,
+                     "pnl_100":  53,
+                     "latest_day_pct":  5.23,
+                     "updated_at":  "2026-03-19 23:34:34"
                  },
                  {
                      "code":  "601868",
@@ -411,12 +381,12 @@
                      "buy_dates":  "2026-03-10",
                      "hold_qty":  100,
                      "avg_buy_price":  3.14,
-                     "latest_price":  3.38,
-                     "change_pct_since_buy":  7.64,
-                     "pnl_total":  24,
-                     "pnl_100":  24,
-                     "latest_day_pct":  2.11,
-                     "updated_at":  "2026-03-18 22:55:17"
+                     "latest_price":  3.36,
+                     "change_pct_since_buy":  7.01,
+                     "pnl_total":  22,
+                     "pnl_100":  22,
+                     "latest_day_pct":  -0.59,
+                     "updated_at":  "2026-03-19 23:34:34"
                  },
                  {
                      "code":  "603381",
@@ -426,12 +396,12 @@
                      "buy_dates":  "2026-03-10",
                      "hold_qty":  100,
                      "avg_buy_price":  27.45,
-                     "latest_price":  26.32,
-                     "change_pct_since_buy":  -4.12,
-                     "pnl_total":  -113,
-                     "pnl_100":  -113,
-                     "latest_day_pct":  -0.34,
-                     "updated_at":  "2026-03-18 22:55:17"
+                     "latest_price":  25.65,
+                     "change_pct_since_buy":  -6.56,
+                     "pnl_total":  -180,
+                     "pnl_100":  -180,
+                     "latest_day_pct":  -2.55,
+                     "updated_at":  "2026-03-19 23:34:34"
                  },
                  {
                      "code":  "603588",
@@ -441,12 +411,42 @@
                      "buy_dates":  "2026-03-09",
                      "hold_qty":  100,
                      "avg_buy_price":  14.02,
-                     "latest_price":  14.69,
-                     "change_pct_since_buy":  4.78,
-                     "pnl_total":  67,
-                     "pnl_100":  67,
-                     "latest_day_pct":  -0.74,
-                     "updated_at":  "2026-03-18 22:55:17"
+                     "latest_price":  14.12,
+                     "change_pct_since_buy":  0.71,
+                     "pnl_total":  10,
+                     "pnl_100":  10,
+                     "latest_day_pct":  -3.88,
+                     "updated_at":  "2026-03-19 23:34:34"
+                 },
+                 {
+                     "code":  "603693",
+                     "name":  "江苏新能",
+                     "industry":  "电力",
+                     "sources":  "再选/调仓",
+                     "buy_dates":  "2026-03-19",
+                     "hold_qty":  100,
+                     "avg_buy_price":  16.89,
+                     "latest_price":  16.89,
+                     "change_pct_since_buy":  0,
+                     "pnl_total":  0,
+                     "pnl_100":  0,
+                     "latest_day_pct":  4.39,
+                     "updated_at":  "2026-03-19 23:34:34"
+                 },
+                 {
+                     "code":  "603817",
+                     "name":  "海峡环保",
+                     "industry":  "环境治理",
+                     "sources":  "再选/调仓",
+                     "buy_dates":  "2026-03-19",
+                     "hold_qty":  100,
+                     "avg_buy_price":  9.07,
+                     "latest_price":  9.07,
+                     "change_pct_since_buy":  0,
+                     "pnl_total":  0,
+                     "pnl_100":  0,
+                     "latest_day_pct":  4.25,
+                     "updated_at":  "2026-03-19 23:34:34"
                  }
              ]
 }
